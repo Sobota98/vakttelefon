@@ -3,8 +3,8 @@
   var en=/\/en(\/|$)/.test(window.location.pathname);
   var T={
     placeholder:en?'Enter postal code or city':'Tast postnummer eller sted',
-    label:en?'On-call phone':'Vakttelefon',
-    notFound:en?'No on-call phone found for':'Ingen vakttelefon funnet for',
+    label:en?'Emergency phone':'Vakttelefon',
+    notFound:en?'No emergency phone found for':'Ingen vakttelefon funnet for',
     notFoundSuffix:en?'. Try a different postal code or city.':'. Prøv et annet postnummer eller sted.'
   };
   function norm(s){return s.toLowerCase().replace(/ø/g,'o').replace(/æ/g,'ae').replace(/å/g,'a').trim();}
