@@ -44,7 +44,7 @@
   if(lbl&&lbl.firstChild)lbl.firstChild.nodeValue=T.label+' ';
   function show(name,loc){
     city.textContent=name; ph.textContent=loc.p; ph.href='tel:'+loc.p.replace(/\s/g,'');
-    if(loc.p2){ph2.textContent=loc.p2;ph2.href='tel:'+loc.p2.replace(/\s/g,'');ph2.style.display='';sep.style.display='';}
+    if(loc.p2){ph2.textContent=loc.p2;ph2.href='tel:'+loc.p2.replace(/\s/g,'');ph2.style.display='inline';sep.style.display='inline';}
     else{ph2.style.display='none';sep.style.display='none';}
     res.style.maxHeight='200px'; res.style.opacity='1'; res.style.pointerEvents='auto';
     nf.style.maxHeight='0'; nf.style.opacity='0';
