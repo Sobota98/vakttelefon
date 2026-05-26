@@ -38,13 +38,14 @@
   var inp=document.getElementById('vkt-input'),clr=document.getElementById('vkt-clear'),
       res=document.getElementById('vkt-result'),city=document.getElementById('vkt-city'),
       ph=document.getElementById('vkt-phone'),ph2=document.getElementById('vkt-phone2'),
+      sep=document.getElementById('vkt-sep'),
       nf=document.getElementById('vkt-not-found'),lbl=document.getElementById('vkt-label');
   inp.placeholder=T.placeholder;
   if(lbl&&lbl.firstChild)lbl.firstChild.nodeValue=T.label+' ';
   function show(name,loc){
     city.textContent=name; ph.textContent=loc.p; ph.href='tel:'+loc.p.replace(/\s/g,'');
-    if(loc.p2){ph2.textContent=loc.p2;ph2.href='tel:'+loc.p2.replace(/\s/g,'');ph2.style.display='block';}
-    else ph2.style.display='none';
+    if(loc.p2){ph2.textContent=loc.p2;ph2.href='tel:'+loc.p2.replace(/\s/g,'');ph2.style.display='';sep.style.display='';}
+    else{ph2.style.display='none';sep.style.display='none';}
     res.style.maxHeight='200px'; res.style.opacity='1'; res.style.pointerEvents='auto';
     nf.style.maxHeight='0'; nf.style.opacity='0';
   }
